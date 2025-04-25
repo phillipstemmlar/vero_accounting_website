@@ -16,6 +16,14 @@ jobs:
       AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
     steps:
       - uses: actions/checkout@master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.15.0
+
+      - uses: npm install
+      - uses: npm run build
+
       - uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ env.AWS_KEY_ID }}
