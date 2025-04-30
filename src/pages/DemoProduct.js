@@ -7,7 +7,7 @@ import axios from 'axios'
 import Notiflix from 'notiflix'
 
 const DemoProduct = (props) => {
-    useDocTitle('MLD | Molad e Konsult - Demo our products')
+    useDocTitle('Vero | Demo Product')
 
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
