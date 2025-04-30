@@ -1,8 +1,31 @@
 import React from 'react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+
 import img from '../assets/images/web.svg'
 import img2 from '../assets/images/app.svg'
 import img3 from '../assets/images/hosting.svg'
 import img4 from '../assets/images/consultation.svg'
+
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5,
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3,
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+    },
+}
 
 const Services = () => {
     return (
@@ -20,101 +43,108 @@ const Services = () => {
                 </div>
 
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Accounting & Bookkeeping</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+                    <div>
+                        <Carousel responsive={responsive}>
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">
+                                        Accounting & Bookkeeping
+                                    </h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Tax & Statutory Compliance</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">
+                                        Tax & Statutory Compliance
+                                    </h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Payroll Administration</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">Payroll Administration</h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">
-                                    Financial Statements Compilation
-                                </h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">
+                                        Financial Statements Compilation
+                                    </h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">
-                                    Business Management & Advisory
-                                </h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">
+                                        Business Management & Advisory
+                                    </h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img
-                                    alt="card img"
-                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img}
-                                />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Secretarial Services</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                                <div className="m-2 text-justify text-sm">
+                                    <img
+                                        alt="card img"
+                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                        src={img}
+                                    />
+                                    <h2 className="font-semibold my-4 text-2xl text-center">Secretarial Services</h2>
+                                    <p className="text-md font-medium">
+                                        We specialize in creating and optimizing high-quality, custom websites for
+                                        businesses and organizations of all sizes. Building mobile-friendly and
+                                        easy-to-use websites and applications for clients.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </Carousel>
                     </div>
                 </div>
             </section>
