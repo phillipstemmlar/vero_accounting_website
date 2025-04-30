@@ -20,12 +20,12 @@ body {
 }
 
 .hero {
-    background: url(./images/hero-bg.svg) top center no-repeat;
+    background: url(./assets/images/hero-bg.svg) top center no-repeat;
     background-size: cover;
 }
 
 .footer {
-    background: url(./images/footer.svg) top center no-repeat;
+    background: url(./assets/images/footer.svg) top center no-repeat;
     background-size: cover;
 }
 
