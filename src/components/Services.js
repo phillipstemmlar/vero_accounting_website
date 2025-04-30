@@ -199,7 +199,7 @@ const Services = () => {
                             </h3>
                             <div>
                                 <p className="my-3 text-xl text-gray-600 font-semibold">
-                                    At Velto, we don’t just work for you — we work with you. We align our expertise with
+                                    At Vero, we don’t just work for you — we work with you. We align our expertise with
                                     your business goals, providing ongoing support that adapts as your needs evolve.
                                 </p>
                             </div>
