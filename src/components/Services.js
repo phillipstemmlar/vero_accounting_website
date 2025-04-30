@@ -11,19 +11,19 @@ const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5,
+        items: 6,
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        items: 4,
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2,
+        items: 3,
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 1,
+        items: 2,
     },
 }
 
@@ -45,7 +45,7 @@ const Services = () => {
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
                     <div>
                         <Carousel responsive={responsive}>
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
                                 <div className="m-2 text-justify text-sm">
                                     <img
                                         alt="card img"
@@ -63,7 +63,7 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
                                 <div className="m-2 text-justify text-sm">
                                     <img
                                         alt="card img"
@@ -80,7 +80,7 @@ const Services = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
                                 <div className="m-2 text-justify text-sm">
                                     <img
                                         alt="card img"
@@ -95,7 +95,7 @@ const Services = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
                                 <div className="m-2 text-justify text-sm">
                                     <img
                                         alt="card img"
@@ -112,7 +112,7 @@ const Services = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
                                 <div className="m-2 text-justify text-sm">
                                     <img
                                         alt="card img"
