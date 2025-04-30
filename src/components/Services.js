@@ -28,7 +28,7 @@ const Services = () => {
                                     className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
                                     src={img}
                                 />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Web Development</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center">Accounting & Bookkeeping</h2>
                                 <p className="text-md font-medium">
                                     We specialize in creating and optimizing high-quality, custom websites for
                                     businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
@@ -36,50 +36,82 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img
                                     alt="card img"
                                     className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img2}
+                                    src={img}
                                 />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Mobile App Development</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center">Tax & Statutory Compliance</h2>
                                 <p className="text-md font-medium">
-                                    We develop high-quality, custom cross-platform mobile applications that are robust
-                                    and optimized for performance, scalability, and accessibility.
+                                    We specialize in creating and optimizing high-quality, custom websites for
+                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
+                                    websites and applications for clients.
                                 </p>
                             </div>
                         </div>
-
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img
                                     alt="card img"
                                     className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img3}
+                                    src={img}
                                 />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">
-                                    Domain and Hosting Services
+                                <h2 className="font-semibold my-4 text-2xl text-center">Payroll Administration</h2>
+                                <p className="text-md font-medium">
+                                    We specialize in creating and optimizing high-quality, custom websites for
+                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
+                                    websites and applications for clients.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="m-2 text-justify text-sm">
+                                <img
+                                    alt="card img"
+                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                    src={img}
+                                />
+                                <h2 className="font-semibold my-4 text-2xl text-center">
+                                    Financial Statements Compilation
                                 </h2>
                                 <p className="text-md font-medium">
-                                    We provide domain registration and web hosting services to individuals and
-                                    organizations to enable them gain visibility in the digital space.
+                                    We specialize in creating and optimizing high-quality, custom websites for
+                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
+                                    websites and applications for clients.
                                 </p>
                             </div>
                         </div>
-
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img
                                     alt="card img"
                                     className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                    src={img4}
+                                    src={img}
                                 />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">General IT Consultations</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center">
+                                    Business Management & Advisory
+                                </h2>
                                 <p className="text-md font-medium">
-                                    Our IT consultations service provides expert guidance and support for businesses and
-                                    individuals looking to optimize their technology solutions.
+                                    We specialize in creating and optimizing high-quality, custom websites for
+                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
+                                    websites and applications for clients.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="m-2 text-justify text-sm">
+                                <img
+                                    alt="card img"
+                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                    src={img}
+                                />
+                                <h2 className="font-semibold my-4 text-2xl text-center">Secretarial Services</h2>
+                                <p className="text-md font-medium">
+                                    We specialize in creating and optimizing high-quality, custom websites for
+                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
+                                    websites and applications for clients.
                                 </p>
                             </div>
                         </div>
@@ -110,14 +142,13 @@ const Services = () => {
                                 className="text-3xl  fg-primary 
                             font-bold"
                             >
-                                We <span className="font-black">Build</span>
+                                We <span className="font-black">Advise</span>
                             </h3>
                             <div>
                                 <p className="my-3 text-xl text-gray-600 font-semibold">
-                                    With over 10 years experience in software analysis and design and a deep
-                                    understanding of the latest IT trends and solutions, we provide customized
-                                    recommendations and strategies to help you improve your operations, reduce costs,
-                                    and increase efficiency.
+                                    With a foundation built on years of accounting and advisory experience, we offer
+                                    practical, tailored solutions to help you make confident financial decisions —
+                                    whether you're growing a business, managing risk, or planning for the future.
                                 </p>
                             </div>
                         </div>
@@ -134,13 +165,12 @@ const Services = () => {
                                 </svg>
                             </div>
                             <h3 className="text-3xl  fg-primary font-bold">
-                                We <span className="font-black">Collaborate</span>
+                                We <span className="font-black">Partner</span>
                             </h3>
                             <div>
                                 <p className="my-3 text-xl text-gray-600 font-semibold">
-                                    We can collaborate with your existing tech team to scale existing software
-                                    applications or design customized software applications that suits your everyday
-                                    need and simplifies various processes.
+                                    At Velto, we don’t just work for you — we work with you. We align our expertise with
+                                    your business goals, providing ongoing support that adapts as your needs evolve.
                                 </p>
                             </div>
                         </div>
