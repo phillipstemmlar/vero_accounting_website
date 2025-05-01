@@ -28,6 +28,14 @@ const Footer = () => {
                             <ul className="text-md">
                                 <li className="mb-2">
                                     <HashLink
+                                        to="/#"
+                                        className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                                    >
+                                        Home
+                                    </HashLink>
+                                </li>
+                                <li className="mb-2">
+                                    <HashLink
                                         to="#"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
@@ -62,7 +70,7 @@ const Footer = () => {
                                         to="#"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
-                                        Web Development
+                                        Accounting & Bookkeeping
                                     </Link>
                                 </li>
                                 <li className="mb-2">
@@ -70,7 +78,7 @@ const Footer = () => {
                                         to="#"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
-                                        Mobile App Development
+                                        Tax & Statutory Compliance
                                     </Link>
                                 </li>
                                 <li className="mb-2">
@@ -78,7 +86,7 @@ const Footer = () => {
                                         to="#"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
-                                        Domain and Hosting
+                                        Payroll Administration
                                     </Link>
                                 </li>
                                 <li className="mb-2">
@@ -86,7 +94,23 @@ const Footer = () => {
                                         to="#"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
-                                        General IT Consultations
+                                        Financial Statements Compilation
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link
+                                        to="#"
+                                        className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                                    >
+                                        Business Management & Advisory
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link
+                                        to="#"
+                                        className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
+                                    >
+                                        Secretarial Services
                                     </Link>
                                 </li>
                             </ul>

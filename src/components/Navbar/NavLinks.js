@@ -3,7 +3,10 @@ import { HashLink } from 'react-router-hash-link'
 
 const NavLinks = () => {
     return (
-        <>
+        <div>
+            <HashLink className="px-4 font-extrabold text-gray-500 fg-primary-hover" smooth to="/#">
+                Home
+            </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 fg-primary-hover" smooth to="/#about">
                 About
             </HashLink>
@@ -23,7 +26,7 @@ const NavLinks = () => {
             >
                 Demo our products
             </HashLink>
-        </>
+        </div>
     )
 }
 
