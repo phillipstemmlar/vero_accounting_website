@@ -115,3 +115,7 @@ body {
 .circle {
     clip-path: circle();
 }
+
+.h-70 {
+    height: 70%;
+}
