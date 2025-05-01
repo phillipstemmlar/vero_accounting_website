@@ -16,8 +16,8 @@ const Hero = () => {
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold fg-primary">More Than Accounting.</h1>
                             <p className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-                                We help you move forward with confidence. At Velto, we combine powerful cloud-based
-                                tools with the expertise of real professionals — so you get more than just numbers.
+                                We help you move forward with confidence. At Vero, we combine powerful cloud-based tools
+                                with the expertise of real professionals — so you get more than just numbers.
                             </p>
                             <p className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
                                 You focus on growing your business. We’ll handle the rest.
