@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../components/Navbar/NavBar'
-import heroImg from '../assets/images/Illustrations/online-collaboration.svg'
+import heroImg from '../assets/images/Illustrations/team-collaboration.svg'
 
 const Hero = () => {
     return (
