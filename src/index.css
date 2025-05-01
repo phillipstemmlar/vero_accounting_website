@@ -119,3 +119,20 @@ body {
 .h-70 {
     height: 70%;
 }
+
+.service-img-lg,
+.service-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-img img {
+    height: 250px;
+    width: 250px;
+}
+
+.service-img-lg img {
+    height: 250px;
+    width: 200px;
+}
