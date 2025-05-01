@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <>
             <div id="about">
-                <div className="m-10">
+                <div className="mt-10">
                     <h2 className="my-2 text-center text-3xl fg-primary uppercase font-bold">About Us</h2>
                     <div className="d-flex flex-row mt-10 justify-content-around">
                         <div className="flex-2 d-flex justify-content-end align-items-start">
