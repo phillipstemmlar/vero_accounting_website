@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import NavLinks from '../Navbar/NavLinks'
 import { HashLink } from 'react-router-hash-link'
 
+import logo from '../../assets/images/Vero/Vero Icon.png'
+
 const NavBar = () => {
     const [top, setTop] = useState(!window.scrollY)
     const [isOpen, setisOpen] = React.useState(false)
@@ -25,9 +27,17 @@ const NavBar = () => {
         >
             <div className="flex flex-row justify-between items-center py-2">
                 <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
-                    <HashLink smooth to="/#hero">
-                        <h1 className="font-extrabold text-4xl fg-primary">Vero Accounting and Advisory</h1>
+                    <HashLink smooth to="/#hero" className="d-flex align-items-center">
+                        <img alt="Vero" src={logo} width={60} height={60} />
+                        <h1 className="flex-0 font-extrabold text-4xl fg-primary ml-5">Vero</h1>
                     </HashLink>
+                    <h2 className="flex-0 font-semibold fg-primary ml-20">
+                        <span className="text-xl">Tax</span>
+                        <span className="px-5">•</span>
+                        <span className="text-xl">Accounting</span>
+                        <span className="px-5">•</span>
+                        <span className="text-xl">Advisory</span>
+                    </h2>
                 </div>
                 <div className="group flex flex-col items-center">
                     <button className="p-2 rounded-lg lg:hidden fg-primary" onClick={handleClick}>
