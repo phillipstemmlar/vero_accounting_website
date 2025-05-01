@@ -13,9 +13,6 @@ const NavLinks = () => {
             <HashLink className="px-4 font-extrabold text-gray-500 fg-primary-hover" smooth to="/#services">
                 Services
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 fg-primary-hover" to="/">
-                Portfolio
-            </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 fg-primary-hover" to="/contact#contact">
                 Contact Us
             </HashLink>
@@ -24,7 +21,7 @@ const NavLinks = () => {
                 smooth
                 to="/get-demo#demo"
             >
-                Demo our products
+                Request a quote
             </HashLink>
         </div>
     )
