@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
+import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-import SVG from './svg/SVG'
+import SVG from "./svg/SVG";
 
 const Footer = () => {
     return (
@@ -69,7 +69,7 @@ const Footer = () => {
                             <ul className="text-md">
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Accounting & Bookkeeping
@@ -77,7 +77,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Tax & Statutory Compliance
@@ -85,7 +85,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Payroll Administration
@@ -93,7 +93,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Financial Statements Compilation
@@ -101,7 +101,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Business Management & Advisory
@@ -109,7 +109,7 @@ const Footer = () => {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        to="#"
+                                        to="/#services"
                                         className="fg-primary hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out"
                                     >
                                         Secretarial Services
@@ -165,7 +165,7 @@ const Footer = () => {
                         <div className="w-full md:w-4/12 px-4 mx-auto text-center py-2">
                             <div className="text-sm text-gray-200 font-semibold py-1">
                                 Copyright &copy; {new Date().getFullYear()}
-                                {'  '}
+                                {"  "}
                                 <HashLink to="#" className=" hover:text-gray-900">
                                     Vero Accounting and Advisory
                                 </HashLink>
@@ -176,6 +176,6 @@ const Footer = () => {
                 </div>
             </footer>
         </>
-    )
-}
-export default Footer
+    );
+};
+export default Footer;
