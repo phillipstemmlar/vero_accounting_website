@@ -1,13 +1,15 @@
-import React from 'react'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
+import React, { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-import img from '../assets/images/Illustrations/finance.svg'
-import img2 from '../assets/images/Illustrations/certification.svg'
-import img3 from '../assets/images/Illustrations/transfer-money.svg'
-import img4 from '../assets/images/Illustrations/performance-overview.svg'
-import img5 from '../assets/images/Illustrations/visualization.svg'
-import img6 from '../assets/images/Illustrations/workspace.svg'
+import img1 from "../assets/images/Illustrations/finance.svg";
+import img2 from "../assets/images/Illustrations/certification.svg";
+import img3 from "../assets/images/Illustrations/transfer-money.svg";
+import img4 from "../assets/images/Illustrations/performance-overview.svg";
+import img5 from "../assets/images/Illustrations/visualization.svg";
+import img6 from "../assets/images/Illustrations/workspace.svg";
+
+import ServiceDialog from "./Dialogs/ServiceDialog";
 
 const responsive = {
     superLargeDesktop: {
@@ -27,11 +29,104 @@ const responsive = {
         breakpoint: { max: 464, min: 0 },
         items: 2,
     },
-}
+};
+
+const serviceList = [
+    {
+        title: "Accounting & Bookkeeping",
+        img: img1,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Monthly management packs",
+            "Actual vs budgeted comparisons",
+            "Detailed cash flow planning",
+            "Budget preparation and implementation",
+            "Maintenance of books using computerized accounting systems",
+            "Monthly bank and creditors reconciliations",
+            "Processing of online payments",
+        ],
+    },
+    {
+        title: "Tax & Statutory Compliance",
+        img: img2,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Individual and provisional tax returns (IRP6 & IT12)",
+            "Personal and business income tax planning",
+            "Corporate tax returns (IT14)",
+            "VAT registration and returns",
+            "PAYE tax registration and returns",
+            "EMP501 reconciliations",
+            "Tax clearance certificates",
+            "Tax directives",
+            "Registration for income and provisional tax",
+            "SARS queries, objections, and appeals",
+            "Small business and corporate tax compliance",
+            "Tax advisory for individuals and companies",
+        ],
+    },
+    {
+        title: "Payroll Administration",
+        img: img3,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Payroll processing and monthly employee payslips",
+            "PAYE, UIF, and SDL calculations and submissions",
+            "IRP5 preparation",
+            "Tax compliance for expatriate employees",
+            "Liaising with SARS and Department of Labour",
+            "Employee data maintenance and compliance",
+        ],
+    },
+    {
+        title: "Financial Statements Compilation",
+        img: img4,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Preparation of annual financial statements",
+            "Compliant reporting under relevant frameworks",
+            "Supporting documentation and reconciliations",
+        ],
+    },
+    {
+        title: "Business Management & Advisory",
+        img: img5,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Strategic business consulting",
+            "Restructuring and company valuations",
+            "Management consulting",
+            "Human resource advisory",
+            "Advice on accounting systems and software selection",
+            "Computerization of accounting departments",
+        ],
+    },
+    {
+        title: "Secretarial Services",
+        img: img6,
+        description:
+            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+        items: [
+            "Company registrations and formations",
+            "Annual returns and statutory filings",
+            "Shareholder registry maintenance",
+            "Corporate changes and CIPC submissions",
+            "Issuing of compliance and statutory certificates",
+            "Ongoing secretarial support",
+        ],
+    },
+];
 
 const Services = () => {
-    const imageWidth = 250
-    const imageHeight = 300
+    const [selectedService, setSelectedService] = useState(null);
+
+    const showDialog = () => selectedService != null;
+
     return (
         <div id="services" className="bg-gray-100 py-12">
             <section data-aos="zoom-in-down">
@@ -46,132 +141,51 @@ const Services = () => {
                     </h2>
                 </div>
 
-                <div className="px-12" data-aos="fade-down" data-aos-delay="600">
-                    <Carousel
-                        // swipeable={false} draggable={false} showDots={true}
-                        responsive={responsive}
-                    >
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out "
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img}
-                                    />
+                <div data-aos="fade-down" data-aos-delay="600">
+                    <Carousel swipeable={false} draggable={false} responsive={responsive} className="py-12">
+                        {serviceList.map((service, i) => {
+                            const imageWidth = 250;
+                            const imageHeight = 300;
+                            const { title, img, description, items } = service;
+                            return (
+                                <div key={i}>
+                                    <div
+                                        className={`bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 clickable group ${
+                                            i < serviceList.length - 1 ? "mr-10" : ""
+                                        }`}
+                                        onClick={() => setSelectedService(service)}
+                                    >
+                                        <div className="m-2 text-justify text-sm">
+                                            <div className="service-img">
+                                                <img
+                                                    alt="card img"
+                                                    className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
+                                                    width={imageWidth}
+                                                    height={imageHeight}
+                                                    src={img}
+                                                    draggable={false}
+                                                />
+                                            </div>
+                                            <h2 className="font-semibold my-4 text-2xl text-center">{title}</h2>
+                                            <p className="text-md font-medium">{description}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">Accounting & Bookkeeping</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img-lg">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img2}
-                                    />
-                                </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">Tax & Statutory Compliance</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img-lg">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img3}
-                                    />
-                                </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">Payroll Administration</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img4}
-                                    />
-                                </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">
-                                    Financial Statements Compilation
-                                </h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group mr-10">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img-lg">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img5}
-                                    />
-                                </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">
-                                    Business Management & Advisory
-                                </h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <div className="service-img">
-                                    <img
-                                        alt="card img"
-                                        className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out"
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        src={img6}
-                                    />
-                                </div>
-                                <h2 className="font-semibold my-4 text-2xl text-center">Secretarial Services</h2>
-                                <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for
-                                    businesses and organizations of all sizes. Building mobile-friendly and easy-to-use
-                                    websites and applications for clients.
-                                </p>
-                            </div>
-                        </div>
+                            );
+                        })}
                     </Carousel>
                 </div>
+            </section>
+
+            <section>
+                <ServiceDialog
+                    showDialog={showDialog()}
+                    title={selectedService?.title ?? ""}
+                    description={selectedService?.description ?? ""}
+                    items={selectedService?.items ?? []}
+                    img={selectedService?.img}
+                    onClose={() => setSelectedService(null)}
+                />
             </section>
 
             <section>
@@ -233,7 +247,7 @@ const Services = () => {
                 </div>
             </section>
         </div>
-    )
-}
+    );
+};
 
-export default Services
+export default Services;

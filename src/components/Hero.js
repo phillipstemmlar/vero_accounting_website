@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import NavBar from '../components/Navbar/NavBar'
-import heroImg from '../assets/images/Illustrations/team-collaboration.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import NavBar from "../components/Navbar/NavBar";
+import heroImg from "../assets/images/Illustrations/team-collaboration.svg";
 
 const Hero = () => {
     return (
@@ -54,7 +54,7 @@ const Hero = () => {
                         <div className="flex lg:justify-end w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="700">
                             <img
                                 alt="card img"
-                                className="rounded-t float-right duration-1000 w-full h-70 mt-20"
+                                className="rounded-t float-right duration-1000 w-full h-70p mt-20"
                                 src={heroImg}
                             />
                         </div>
@@ -62,7 +62,7 @@ const Hero = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

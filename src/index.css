@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
     --primary-color: #3485ba;
@@ -16,7 +16,7 @@
 
 body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .hero {
@@ -41,6 +41,10 @@ body {
 
 .fg-primary {
     color: var(--primary-color);
+}
+
+.fg-white {
+    color: white;
 }
 
 .border-primary {
@@ -116,8 +120,40 @@ body {
     clip-path: circle();
 }
 
-.h-70 {
+.h-70p {
     height: 70%;
+}
+
+.h-80p {
+    height: 80%;
+}
+
+.h-90p {
+    height: 90%;
+}
+
+.h-100p {
+    height: 100%;
+}
+
+.h-100px {
+    height: 100px;
+}
+
+.w-70p {
+    width: 70%;
+}
+
+.w-80p {
+    width: 80%;
+}
+
+.w-90p {
+    width: 90%;
+}
+
+.w-100p {
+    width: 100%;
 }
 
 .service-img-lg,
@@ -135,4 +171,17 @@ body {
 .service-img-lg img {
     height: 250px;
     width: 200px;
+}
+
+.service-item {
+    list-style-type: disc;
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
