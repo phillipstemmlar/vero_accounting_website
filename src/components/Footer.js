@@ -137,7 +137,7 @@ const Footer = () => {
                                     </li>
                                     <li className="mr-5">
                                         <a
-                                            href="https://www.facebook.com/"
+                                            href="https://www.facebook.com/profile.php?id=61575972264023"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex justify-center items-center fg-primary hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-50 ease-in-out"
@@ -148,7 +148,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://www.instagram.com/"
+                                            href="https://www.instagram.com/vero_accounting/"
                                             target="_blank"
                                             className="flex justify-center items-center fg-primary hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-50 ease-in-out"
                                             aria-label="Instagram"

@@ -36,7 +36,7 @@ const serviceList = [
         title: "Accounting & Bookkeeping",
         img: img1,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "Stay on top of your finances with accurate, efficient bookkeeping and monthly accounting support tailored to your business.",
         items: [
             "Monthly management packs",
             "Actual vs budgeted comparisons",
@@ -44,14 +44,13 @@ const serviceList = [
             "Budget preparation and implementation",
             "Maintenance of books using computerized accounting systems",
             "Monthly bank and creditors reconciliations",
-            "Processing of online payments",
         ],
     },
     {
         title: "Tax & Statutory Compliance",
         img: img2,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "From tax planning to SARS submissions, we ensure you're fully compliant — and never caught off guard.",
         items: [
             "Individual and provisional tax returns (IRP6 & IT12)",
             "Personal and business income tax planning",
@@ -63,7 +62,6 @@ const serviceList = [
             "Tax directives",
             "Registration for income and provisional tax",
             "SARS queries, objections, and appeals",
-            "Small business and corporate tax compliance",
             "Tax advisory for individuals and companies",
         ],
     },
@@ -71,7 +69,7 @@ const serviceList = [
         title: "Payroll Administration",
         img: img3,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "Reliable, on-time payroll solutions — including PAYE, UIF, and SDL — so your team is always taken care of.",
         items: [
             "Payroll processing and monthly employee payslips",
             "PAYE, UIF, and SDL calculations and submissions",
@@ -85,10 +83,10 @@ const serviceList = [
         title: "Financial Statements Compilation",
         img: img4,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "Clear, compliant, and professional financial statements prepared in line with applicable reporting frameworks.",
         items: [
             "Preparation of annual financial statements",
-            "Compliant reporting under relevant frameworks",
+            "Compliance reporting under relevant frameworks",
             "Supporting documentation and reconciliations",
         ],
     },
@@ -96,7 +94,7 @@ const serviceList = [
         title: "Business Management & Advisory",
         img: img5,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "Make confident decisions with expert insights. We offer strategic guidance to help your business grow and adapt.",
         items: [
             "Strategic business consulting",
             "Restructuring and company valuations",
@@ -110,7 +108,7 @@ const serviceList = [
         title: "Secretarial Services",
         img: img6,
         description:
-            "We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.",
+            "Let us handle your company registrations, CIPC filings, amendments, and ongoing compliance — seamlessly.",
         items: [
             "Company registrations and formations",
             "Annual returns and statutory filings",

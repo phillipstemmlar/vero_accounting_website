@@ -1,57 +1,57 @@
-import React, { useState } from 'react'
-import NavBar from '../components/Navbar/NavBar'
-import Footer from '../components/Footer'
-import { useDocTitle } from '../components/CustomHook'
-import axios from 'axios'
+import React, { useState } from "react";
+import NavBar from "../components/Navbar/NavBar";
+import Footer from "../components/Footer";
+import { useDocTitle } from "../components/CustomHook";
+import axios from "axios";
 // import emailjs from 'emailjs-com';
-import Notiflix from 'notiflix'
+import Notiflix from "notiflix";
 
-import SVG from '../components/svg/SVG'
+import SVG from "../components/svg/SVG";
 
 const DemoProduct = (props) => {
-    useDocTitle('Vero | Demo Product')
+    useDocTitle("Vero | Demo Product");
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
-    const [demoProducts, setDemoProducts] = useState([])
-    const [errors, setErrors] = useState([])
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+    const [demoProducts, setDemoProducts] = useState([]);
+    const [errors, setErrors] = useState([]);
 
     const handleChange = (e) => {
-        const value = e.target.value
-        const checked = e.target.checked
-        errors.products = []
+        const value = e.target.value;
+        const checked = e.target.checked;
+        errors.products = [];
         if (checked) {
-            setDemoProducts([...demoProducts, value])
+            setDemoProducts([...demoProducts, value]);
         } else {
-            setDemoProducts(demoProducts.filter((e) => e !== value))
+            setDemoProducts(demoProducts.filter((e) => e !== value));
         }
-    }
+    };
     const clearErrors = () => {
-        setErrors([])
-    }
+        setErrors([]);
+    };
 
     const clearInput = () => {
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
-    }
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+    };
 
     function sendEmail(e) {
-        e.preventDefault()
-        document.getElementById('submitBtn').disabled = true
-        document.getElementById('submitBtn').innerHTML = 'Loading...'
-        let fData = new FormData()
-        fData.append('first_name', firstName)
-        fData.append('last_name', lastName)
-        fData.append('email', email)
-        fData.append('phone_number', phone)
-        fData.append('message', message)
-        fData.append('products', demoProducts)
+        e.preventDefault();
+        document.getElementById("submitBtn").disabled = true;
+        document.getElementById("submitBtn").innerHTML = "Loading...";
+        let fData = new FormData();
+        fData.append("first_name", firstName);
+        fData.append("last_name", lastName);
+        fData.append("email", email);
+        fData.append("phone_number", phone);
+        fData.append("message", message);
+        fData.append("products", demoProducts);
 
         // emailjs.sendForm('service_7uy4ojg', 'template_et9wvdg', e.target, 'user_uE0bSPGbhRTmAF3I2fd3s')
         //   .then((result) => {
@@ -71,32 +71,32 @@ const DemoProduct = (props) => {
         //   });
 
         axios({
-            method: 'post',
+            method: "post",
             url: process.env.REACT_APP_DEMO_REQUEST_API,
             data: fData,
             headers: {
-                'Content-Type': 'multipart/form-data',
+                "Content-Type": "multipart/form-data",
             },
         })
             .then(function (response) {
-                document.getElementById('submitBtn').disabled = false
-                document.getElementById('submitBtn').innerHTML = 'send message'
-                clearInput()
+                document.getElementById("submitBtn").disabled = false;
+                document.getElementById("submitBtn").innerHTML = "send message";
+                clearInput();
                 //handle success
-                Notiflix.Report.success('Success', response.data.message, 'Okay')
+                Notiflix.Report.success("Success", response.data.message, "Okay");
             })
             .catch(function (error) {
-                document.getElementById('submitBtn').disabled = false
-                document.getElementById('submitBtn').innerHTML = 'send message'
+                document.getElementById("submitBtn").disabled = false;
+                document.getElementById("submitBtn").innerHTML = "send message";
                 //handle error
-                const { response } = error
+                const { response } = error;
                 if (response.status === 500) {
-                    Notiflix.Report.failure('An error occurred', response.data.message, 'Okay')
+                    Notiflix.Report.failure("An error occurred", response.data.message, "Okay");
                 }
                 if (response.data.errors !== null) {
-                    setErrors(response.data.errors)
+                    setErrors(response.data.errors);
                 }
-            })
+            });
     }
     return (
         <>
@@ -272,7 +272,7 @@ const DemoProduct = (props) => {
 
                             <div className="flex my-4 w-2/3 lg:w-1/2">
                                 <a
-                                    href="https://www.facebook.com/"
+                                    href="https://www.linkedin.com/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex justify-center items-center fg-primary hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-50 ease-in-out mr-5"
@@ -281,7 +281,7 @@ const DemoProduct = (props) => {
                                     {SVG.linkedIn}
                                 </a>
                                 <a
-                                    href="https://www.facebook.com/"
+                                    href="https://www.facebook.com/profile.php?id=61575972264023"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex justify-center items-center fg-primary hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-50 ease-in-out mr-5"
@@ -290,7 +290,7 @@ const DemoProduct = (props) => {
                                     {SVG.facebook}
                                 </a>
                                 <a
-                                    href="https://www.instagram.com/"
+                                    href="https://www.instagram.com/vero_accounting/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex justify-center items-center fg-primary hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-50 ease-in-out"
@@ -305,7 +305,7 @@ const DemoProduct = (props) => {
             </div>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default DemoProduct
+export default DemoProduct;

@@ -1,15 +1,23 @@
-import React from 'react'
-import img from '../assets/images/Vero/Irene-Square.jpg'
+import React from "react";
+import img from "../assets/images/Vero/Irene2-Square.jpg";
 
 const AboutUs = () => {
+    const imageHeight = 250;
+    const imageWidth = 250;
     return (
         <>
             <div id="about">
                 <div className="mt-10">
                     <h2 className="my-2 text-center text-3xl fg-primary uppercase font-bold">About Us</h2>
                     <div className="d-flex flex-row mt-10 justify-content-around">
-                        <div className="flex-2 d-flex justify-content-end align-items-start">
-                            <img alt="card img" className="rounded-t circle" src={img} />
+                        <div className="flex-2 d-flex justify-content-end align-items-start mr-10">
+                            <img
+                                alt="card img"
+                                className="rounded-t circle"
+                                src={img}
+                                height={imageHeight}
+                                width={imageWidth}
+                            />
                         </div>
                         <div className="flex-3 fg-primary p-10">
                             <div className="pb-5">
@@ -25,15 +33,12 @@ const AboutUs = () => {
                             <p className="pb-5">
                                 With a strong foundation in accounting and a passion for building long- term client
                                 relationships, Irene is committed to growing the firm and staying actively involved in
-                                the profession for decades to come. Did You Know? The name Vero is inspired by the Latin
-                                word “verus”, meaning true. It reflects our core belief: that honesty, clarity, and
-                                trusted advice should be at the heart of every client relationship. At Vero, we don’t
-                                just deliver services — we handle the numbers, so you can focus on what matters most.
+                                the profession for decades to come.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="fg-primary d-flex justify-content-center mb-10">
+                <div className="fg-primary d-flex justify-content-center mb-10 mt-5">
                     <div>
                         <div className="pb-5">
                             <div className="font-bold text-2xl">Did You Know?</div>
@@ -51,7 +56,7 @@ const AboutUs = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default AboutUs
+export default AboutUs;
